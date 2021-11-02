@@ -1,0 +1,64 @@
+@startuml
+
+class Main{
+    + start()
+    + main(String[] args)
+}
+
+class Item{
+    - String title;
+    - String description;
+    - String duedate;
+    - String check;
+    + Item()
+    + readtitle ()
+    + newtitle ()
+    + readdescription ()
+    + newdescription ()
+    + readduedate ()
+    + newduedate ()
+    + readcheck ()
+    + newcheck ()
+
+}
+
+class ToDoList{
+    - String title;
+    - int numofitems;
+    - ArrayList<Item> Itemlist;
+    + ToDoList()
+    + readtitle ()
+    + newtitle ()
+    + readnumberofitem ()
+    + newnumberofitems ()
+    + readitemarraylist ()
+    + newitemarraylist ()
+    + additem ()
+    + removeitem ()
+    + itemdescription ()
+    + itemduedate ()
+    + itemcompletion ()
+
+}
+
+class ToDoListFunctions{
+    - int numberoflists;
+    - ArrayList<ToDoList> ListToDolist;
+    + ToDoListFunctions()
+    + addlist ()
+    + removelist ()
+    + edittitle ()
+    + additem ()
+    + removeitem ()
+    + editdescription ()
+    + duedate ()
+    + editcompletetioncheck ()
+    + displayallitems ()
+    + displayincompleteitems ()
+    + displaycompleteitems ()
+
+}
+
+Item->ToDoList
+ToDoList->ToDoListFunctions
+@enduml
